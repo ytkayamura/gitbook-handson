@@ -1,44 +1,39 @@
-# Lesson2: ハンズオンプロジェクトのセットアップ
-## ハンズオンプロジェクトを作成
-これから開発を開始したいディレクトリに移動します。
+# Lesson 3: Herokuへのデプロイ
+`Lesson 2`で作成した`webapp-handson`はすでにHerokuにデプロイして公開できる状態になっています。  
+`yarn start`(`npm start`)でビルド->起動できるようになっていることとExpressの`listen()`の引数のポートに`process.env.PORT`を指定してあるのがポイントです。  
+ではHerokuでアプリケーションを公開してみましょう。
+
+## Herokuアカウントの作成
+`Log In`ボタンの下の`Sign Up`リンクからアカウントを作成してください。
+https://id.heroku.com/login
+
+## Herokuアプリケーション(の枠)を作成
+作成したアカウントでログインすると、下記URLに移動するかと思います。  
+https://dashboard.heroku.com/apps  
+
+右上の`New`->`Create new app`でアプリを作成します。  
+`app-name`はユーザー間で重複できません。  
+`webapp-handson-(ユーザ名)`とでもしておきましょうか。  
+
+## Heroku CLIのインストール
+ダウンロードしてインストールしてください。
+https://devcenter.heroku.com/articles/heroku-cli#download-and-install
+
+## CLIログイン
+
+## アプリケーションのデプロイ
+インストールが終わったらターミナルを開き直して、`webapp-handson`ディレクトリに移動して、CLIでのログインを行います。
 ```
-(例)
-$ cd ~/work
-```
-ハンズオンプロジェクトをクローンして、パッケージをインストールします。
-```
-$ git clone https://gitlab.com/jabaoplus/webapp-hanson.git
+$ heorku login
 ```
 
-## SourceTreeの使用
-`新規...`->`既存のローカルリポジトリを追加`より`git clone`で作成された`webapp-handson`ディレクトリを開きます。
+作成したHerokuアプリケーションを`webapp-handson`のgit設定でリモートリポジトリとして設定します。
+```
+$ heroku git:remote -a `webapp-handson-(ユーザ名)`
+```
+`.git/config`を開くと`[remote "heroku"]`というセクションが追加されています。
 
-## VSCodeの使用
-`Start`->`Open folder...`より`webapp-handson`ディレクトリをVisualCodeで開きます。
-
-## アプリケーションの起動
-npmパッケージをインストールします。
+`webapp-handson`をHerokuにデプロイしましょう。
 ```
-$ yarn
+$ git push heroku master
 ```
-ビルドします。  
-`watch`モードにしてあるので、ソースが変更されたら自動的にビルドされます。  
-ただし、ソースを移動した場合など、うまくいかなくなることがあるので、その場合は`Ctrl+C`で停止して、再実行してください。
-```
-$ yarn build:dev:server
-```
-もう一枚ターミナルを開いてプロジェクトディレクトリに移動し、アプリケーションを起動します。  
-```
-(例)
-$ cd ~/work/webapp-handson
-```
-```
-$ yarn start:dev:server
-```
-こちらも再ビルド後に再起動されるようにしてありますが、うまくいかない場合は`Ctrl+C`で停止して、再実行してください。
-
-ブラウザで下記のURLを開いてください。
-```
-http://localhost:8080
-```
-`Hello Express!`と表示されたらOKです！
