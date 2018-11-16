@@ -1,5 +1,5 @@
 # Lesson 1: 環境構築(Mac編)
-まっさらな環境で試せていないので、手順漏れがあるかもしれません。  
+まっさらな環境で試せていないので、手順に漏れがあるかもしれません。  
 上手くいかなかったら教えてください。
 ## 各種インストール
 #### Homebrewのインストール
@@ -37,7 +37,7 @@ https://www.sourcetreeapp.com/download-archives
 #### nodebrewのインストール
 nodeのバージョン管理ツールです。  
 複数バージョンのnodeをインストールして切り替えができます。  
-`ndenv`の方がフォルダ毎にバージョンを設定できるので今から環境構築する人はこちらのほうが便利のはずですが、私が使ってないため、以下は`nodebrew`の導入方法です。  
+同カテゴリのツール`ndenv`の方がディレクトリ毎にバージョンを設定できるので今から環境構築する人はこちらが便利のはずですが、私が使ってないため、以下は`nodebrew`の導入方法です。  
 複数のプロジェクト毎に依存するnodeのバージョンがずれてきた場合に必要になるので、必ずどちらかを導入しましょう。  
 インストールの確認。  
 ```
@@ -74,9 +74,8 @@ v10.11.0
 ```
 
 #### yarnのインストール
-`npm`の速い版です。  
-`npm`はnodeのパッケージ管理ツールです。
-普通にインストールするとnodeまでインストールされるので、yarnだけインストールします。
+`yarn`はnodeのパッケージ管理ツール`npm`の高速版です。  
+普通にインストールすると上でインストール済みのnodeまでインストールされてしまうので、nodeのインストールをスキップするオプションを指定します。
 ```
 $ brew install yarn --without-node
 ```
@@ -99,55 +98,4 @@ https://code.visualstudio.com/
 ダウンロード、解凍して、`アプリケーション`フォルダに入れます。  
 tslintのExtensionもインストールしておきましょう。
 https://marketplace.visualstudio.com/items?itemName=eg2.tslint
-上のページの`install`ボタンを押し、VSCode上でインストールを完了させてください。
-***
-## 開発の開始
-#### ハンズオンプロジェクトを作成
-これから開発を開始したいディレクトリに移動します。
-```
-(例)
-$ cd ~/work
-```
-ハンズオンプロジェクトをクローンして、パッケージをインストールします。
-```
-$ git clone git@gitlab.com:jabaoplus/typescript-webapp-handson.git typescript-webapp-handson
-```
-#### ハンズオン用ブランチに設定
-gitのブランチをハンズオン用のブランチに変更します。
-```
-$ git checkout handson
-Branch handson set up to track remote branch handson from origin.
-Switched to a new branch 'handson'
-```
-
-#### SourceTreeの使用
-`新規...`->`既存のローカルリポジトリを追加`より`git clone`で作成された`typescript-webapp-handson`ディレクトリを開きます。
-#### VSCodeの使用
-`Start`->`Open folder...`より`typescript-webapp-handson`ディレクトリをVisualCodeで開きます。
-
-#### 開発の開始
-`package.json`と`yarn.lock`に記載されているパッケージをインストールします。
-```
-$ yarn
-```
-ビルドします。  
-`watch`モードにしてあるので、ソースが変更されたら自動的にビルドされます。  
-ただし、ソースを移動した場合など、うまくいかなくなる場合があるので、その場合は`Ctrl+C`で停止して、再実行してください。
-```
-$ yarn build:dev:server
-```
-もう一枚ターミナルを開いてプロジェクトディレクトリに移動し、アプリケーションを起動します。  
-```
-(例)
-$ cd ~/work/typescript-webapp-handson
-```
-```
-$ yarn start:dev:server
-```
-こちらも再ビルド後に再起動されるようにしてありますが、うまくいかない場合は`Ctrl+C`で停止して、再実行してください。
-
-ブラウザで下記のURLを開いてください。
-```
-http://localhost:8080
-```
-`Hello Express!`と表示されたらOKです！
+上のページの`Install`ボタンを押し、VSCode上でインストールを完了させてください。

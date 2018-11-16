@@ -1,5 +1,5 @@
 # TypeScript WebApp ハンズオン
-超速でTypeScriptによるWebアプリ作成を学びます。  
+TypeScriptによるWebアプリ作成を超速で学びます。  
 TypeScript(ES6)、React、Redux、Express...、ひとつずつやっていきましょう。  
-webpackについては基本的に説明しません  
-余力がある人は調べてみてください。
+webpackについては基本的に説明しません。  
+設定はなるべくシンプルにしてありますので余力がある人は弄ってみてください。
