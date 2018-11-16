@@ -1,4 +1,4 @@
-# Lesson2: ハンズオンプロジェクトのセットアップ
+# Lesson 2: ハンズオンプロジェクトのセットアップ
 ## ハンズオンプロジェクトを作成
 これから開発を開始したいディレクトリに移動します。
 ```
@@ -10,8 +10,11 @@ $ cd ~/work
 $ git clone https://gitlab.com/jabaoplus/webapp-hanson.git
 ```
 
-## SourceTreeの使用
-`新規...`->`既存のローカルリポジトリを追加`より`git clone`で作成された`webapp-handson`ディレクトリを開きます。
+## SourceTreeの使用(Mac)
+`新規...`->`既存のローカルリポジトリを追加`よりLesson1で`git clone`した`webapp-handson`ディレクトリを開きます。
+
+## SourceTreeの使用(Windows)
+`Add`->`参照`よりLesson1で`git clone`した`webapp-handson`ディレクトリを開き、`追加`を押します。
 
 ## VSCodeの使用
 `Start`->`Open folder...`より`webapp-handson`ディレクトリをVisualCodeで開きます。
@@ -22,11 +25,12 @@ npmパッケージをインストールします。
 $ yarn
 ```
 ビルドします。  
-`watch`モードにしてあるので、ソースが変更されたら自動的にビルドされます。  
-ただし、ソースを移動した場合など、うまくいかなくなることがあるので、その場合は`Ctrl+C`で停止して、再実行してください。
 ```
 $ yarn build:dev:server
 ```
+`watch`モードにしてあるので、ソースが変更されたら自動的にビルドされます。  
+ただし、ソースを移動した場合など、うまくいかなくなることがあるので、その場合は`Ctrl+C`で停止して、再実行してください。
+
 もう一枚ターミナルを開いてプロジェクトディレクトリに移動し、アプリケーションを起動します。  
 ```
 (例)
@@ -39,6 +43,6 @@ $ yarn start:dev:server
 
 ブラウザで下記のURLを開いてください。
 ```
-http://localhost:8080
+http://localhost:8081
 ```
 `Hello Express!`と表示されたらOKです！
