@@ -50,6 +50,8 @@ v10.11.0
 下記サイトよりインストールします。
 https://yarnpkg.com/lang/en/docs/install/#windows-stable
 
+バージョンを確認します。  
+下記と多少ずれていても大丈夫のはずです。
 ```
 $ yarn --version
 1.12.3

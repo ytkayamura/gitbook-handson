@@ -7,7 +7,7 @@ $ cd ~/work
 ```
 ハンズオンプロジェクトをクローンして、パッケージをインストールします。
 ```
-$ git clone https://gitlab.com/jabaoplus/webapp-hanson.git
+$ git clone https://gitlab.com/jabaoplus/webapp-handson.git
 ```
 
 ## SourceTreeの使用(Mac)
