@@ -9,4 +9,4 @@
     * [01: import / export](docs/lesson04/01_import-export.md)
     * [02: アロー関数](docs/lesson04/02_arrow-function.md)
     * [03: 簡略記法](docs/lesson04/03_shorthand-expression.md)
-    * [04: TypeScript](docs/lesson04/04_typescript-features.md)
+    * [04: TypeScript機能ピックアップ](docs/lesson04/04_typescript-pickup.md)
