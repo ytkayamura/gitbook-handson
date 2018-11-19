@@ -12,7 +12,7 @@ enum Hyouka {
   FUTSU: 'FUTSU',
   BAD: 'BAD',
 }
-function (Hyoka hyoka) {
+function (hyoka: Hyoka) {
   switch (hyoka) {
   case Hyoka.VERY_GOOD:
     ：
