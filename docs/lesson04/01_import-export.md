@@ -48,7 +48,7 @@ hoge();
 
 
 ## defaultなしexport
-`default`と書かないだけで上の`export default`の場合と同様に`export`できます。
+`default`と書かない以外、上の`export default`の場合と同様に`export`できます。
 ```
 ( defaultなしexport: 変数定義 )
 export const hoge: string = 'hoge';
@@ -74,3 +74,9 @@ import * as hoge from 'hoge';
 console.log(hoge.hoge, hoge.fuga);
 hoge.piyo();
 ```
+
+## 課題
+import / exportを練習してみましょう。
+
+## 参考
+https://gitlab.com/jabaoplus/webapp-handson-lesson/commit/12c70ea45d13355d782434db8d2dadc171a7df7a
