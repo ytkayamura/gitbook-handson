@@ -21,8 +21,8 @@ function (hyoka: Hyoka) {
 }
 ```
 値は省略できます。  
-あんまり使わないと思うので、基本的に省略でよいでしょう。  
-省略した場合は0からはじまる数値が自動的に割り当てられます。
+省略した場合は0からはじまる数値が自動的に割り当てられます。  
+デバッグで値をみることを考えると省略しないほうがよいかもしれません。
 ```
 enum Hyouka {
   VERY_GOOD,
@@ -38,17 +38,17 @@ enum Hyouka {
 ```
 type TypeAB = TypeA | TypeB;
 function (a: TypeA, b: TypeB) {
-  let aa: TypeA = a;  // 当然OK
-  aa = b;             // 当然NG
-  let bb: TypeB = b;  // 当然OK
-  bb = a;             // 当然NG
-  let ab: TypaAB = a; // OK
-  ab = b;             // これもOK
+  let aa: TypeA = a;   // 当然OK
+  aa = b;              // 当然NG
+  let bb: TypeB = b;   // 当然OK
+  bb = a;              // 当然NG
+  let ab: TypaAB = a;  // OK
+  ab = b;              // これもOK
 }
 ```
 
 ## オブジェクト型
-[簡易記法](docs/lesson04/03_shorthand-expression.md)でさらっと登場させてしまいましたが、オブジェクトのプロパティの方を定義するものです。  
+[簡易記法](docs/lesson04/03_shorthand-expression.md)でさらっと登場させてしまいましたが、オブジェクトのプロパティの型を定義するものです。  
 `?`付きのプロパティはオプション、つまり`?`なしのプロパティは必須項目です。
 ```
 interface Hoge {
@@ -87,7 +87,7 @@ const f: (s: string) => string = (s: string) => {
 }
 ```
 こういうコールバック関数の型を定義する場合の方が有用そうです。  
-読みにくいことは読みにくいですが。
+読みにくいことは読みにくいですが。  
 ちなみに`Array.from({ length: count }, (v, k) => k)`はJavaScriptの0〜`count`までの数列作成のイディオム、\`${xxx}\`というのはES6の`テンプレートリテラル`です。  
 関数の中身は無視してもよいです。
 ```
@@ -95,7 +95,7 @@ const f: (s: string) => string = (s: string) => {
 function culculate(f: (n: number) => number, count: number): number {
   const counts: number[] = Array.from({ length: count }, (v, k) => k);
   let result: number = 0;
-  for (const i: number of counts) {
+  for (const i of counts) {
     console.log(`f(${i + 1})=>${f(i + 1)}`);
     result = result + f(i + 1);
   }
