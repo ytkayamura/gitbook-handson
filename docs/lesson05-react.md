@@ -13,7 +13,7 @@ $ yarn add -D webpack-dev-server
 ```
 
 ## コミット差分
-[lesson4-2 アロー関数](docs/lesson04/02_arrow-function.md)の`参考`からの差分は下記となります。
+[Lesson4-2 アロー関数](docs/lesson04/02_arrow-function.md)の`参考`からの差分は下記となります。
 
 https://gitlab.com/jabaoplus/webapp-handson-lesson/commit/1a73fddbdfd57894a29134f1330ddb699cbb7875
 
@@ -25,7 +25,7 @@ https://gitlab.com/jabaoplus/webapp-handson-lesson/commit/1a73fddbdfd57894a29134
 ビルドのエントリポイントとなるindex.tsを作成します。  
 `ReactDOM.render()`の第一引数が`JSX`で記述されたルートとなるReactコンポーネントです。 
 `JSX`はHTMLライクにタグでReactコンポーネントの構造を記述でき、`{}`で囲ってTypeScriptのコードを埋め込むこともできます。  
-厳密には似て非なるものですが、PHP等のHTMLテンプレートに似た感覚で記述できるかと思います。
+厳密には大きく異なるものですが、PHP等のHTMLテンプレートに似た感覚で記述できるかと思います。
 第２引数にはルートコンポーネントを注入するHTMLエレメントを指定しています。  
 importした`React`がコード上に登場していませんが、`JSX`を使用する際に`React`のimportが必要となります。
 ```
@@ -93,9 +93,9 @@ http://localhost:8080
 ```
 
 ***
-以下、サーバサイドのExpressで`index.html`が開くようにしていきます。
+本番(Herokuデプロイ)用にはサーバサイドのExpressから`index.html`が開くようにしておく必要があります。
 ## server/server.ts
-コメントアウトしていた`Hello Express!`を表示していたコードを復活させ、`Lesson4`関連の記述を削除します。(`exercise`ディレクトリは残しておいてもよいです。)  
+コメントアウトしていた`Hello Express!`を表示していたコードを復活させ、`Lesson4`関連の記述を削除します。(`exercise`ディレクトリは残しておいてもよいです)  
 `path`をimport。
 ```
 import * as path from 'path';
@@ -118,5 +118,11 @@ import * as path from 'path';
     },
 ```
 
+## サーバサイド再起動
+`yarn build:dev:server`と`yarn start:dev:server`を一度停止して再実行しましょう。
 
-
+ブラウザで下記のURLを開いてください。
+```
+http://localhost:8081
+```
+`Hello React!`と表示されたらOKです！
