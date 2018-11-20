@@ -9,7 +9,7 @@ Reactの`props`と`state`の使い方について学んでいきます。
 
 ## propsの追加
 Helloコンポーネントにpropsを追加してみましょう。
-### client.component.Hello.tsx
+### client/component/Hello.tsx
 まずはpropsのinterfaceを定義します。
 ```
 interface Props {
@@ -45,7 +45,7 @@ index.tsxから渡す`initialName`の値を変えてやれば、`Hello xxx!`と�
 
 ## stateの追加
 画面表示される`Hello `の後の名前をstateにして変更できるようにしてみましょう。
-### client.component.Hello.tsx
+### client/component/Hello.tsx
 stateのinterfaceを定義します。
 ```
 interface State {
@@ -79,7 +79,7 @@ export default class Hello extends React.Component<Props, State> {
 ## stateの変更
 stateを変更できるボタンを追加します。
 
-### client.component.Hello.tsx
+### client/component/Hello.tsx
 state.nameを`太郎`と`花子`に変更するメソッドを追加します。
 ```
   setNameTaro: () => void = (): void => {
@@ -110,7 +110,7 @@ https://gitlab.com/jabaoplus/webapp-handson-lesson/commit/1a73fddbdfd57894a29134
 
 ## 演習
 ボタンのラベルが可変のコンポーネントを作り、そのコンポーネントからHelloのstate.nameを変更するようにしてみてください。  
-下層のコンポーネントから上層のコンポーネントに値を渡してやるには上層からそのstateを変更するメソッド下層のコンポーネントのpropsとして渡してやるのが定石です。  
+下層のコンポーネントから上層のコンポーネントに値を渡してやるには上層からそのstateを変更するメソッドを下層のコンポーネントのpropsとして渡してやるのが定石です。  
 ただし、この方法はReduxを導入したらあまり使わないはずなので、飛ばして下の解答例を見てしまっても構いません。
 
 ### 解答例
