@@ -52,7 +52,7 @@ ReactDOM.render(
 <script src="/bundle.js"></script>
 ```
 
-## client/component/Hello.ts
+## client/component/Hello.tsx
 `index.ts`で使用されていたルートコンポーネントです。  
 renderの戻り値の`JSX`の型が`JSX.Element`と指定されていますね。
 ```
