@@ -92,9 +92,10 @@ $ yarn start:dev
 http://localhost:8080
 ```
 
-***
+## サーバサイドの設定
 本番(Herokuデプロイ)用にはサーバサイドのExpressから`index.html`が開くようにしておく必要があります。
-## server/server.ts
+
+### server/server.ts
 コメントアウトしていた`Hello Express!`を表示していたコードを復活させ、`Lesson4`関連の記述を削除します。(`exercise`ディレクトリは残しておいてもよいです)  
 `path`をimport。
 ```
@@ -108,7 +109,7 @@ import * as path from 'path';
 + app.use(Express.static(path.join(__dirname, '../public')));
 ```
 
-##  webpack.server.config.js
+###  webpack.server.config.js
 下記を書き加えます。  
 `path`でローカルのフルパスを取得できるようにする設定です。
 ```
@@ -118,7 +119,7 @@ import * as path from 'path';
     },
 ```
 
-## サーバサイド再起動
+### サーバサイド再起動
 `yarn build:dev:server`と`yarn start:dev:server`を一度停止して再実行しましょう。
 
 ブラウザで下記のURLを開いてください。
