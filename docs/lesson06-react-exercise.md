@@ -44,7 +44,7 @@ index.tsxから渡す`initialName`の値を変えてやれば、`Hello xxx!`と�
 確認してみましょう。
 
 ## stateの追加
-画面表示される`Hello `の後の名前をstateにして変化できるようにしてみましょう。
+画面表示される`Hello `の後の名前をstateにして変更できるようにしてみましょう。
 ### client.component.Hello.tsx
 stateのinterfaceを定義します。
 ```
