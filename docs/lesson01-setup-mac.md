@@ -99,3 +99,13 @@ https://code.visualstudio.com/
 tslintのExtensionもインストールしておきましょう。
 https://marketplace.visualstudio.com/items?itemName=eg2.tslint
 上のページの`Install`ボタンを押し、VSCode上でインストールを完了させてください。
+
+
+悲報です。  
+Mac版VSCodeでは日本語をバックスペースで削除した際に制御文字が残ることがあるようです。  
+とりあえず制御文字を表示するように設定を変更します。  
+* `Code`->`Preferences`から、  
+`Search settings`に `renderCo` と入力、  
+`Editor: Render Control Charactors`にチェック。  
+
+意図しない制御文字ができてしまった際には必ず削除するようにしましょう。  
