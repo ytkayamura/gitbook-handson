@@ -62,7 +62,7 @@ StateをReact.Componentのジェネリックに指定。
 ```
 class定義の中でstateを定義、初期化します。
 ```typescript
-export default class Hello extends React.Component<Props, State> {
+  export default class Hello extends React.Component<Props, State> {
 + state: State = {
 +   name: this.props.initialName,
 + };
