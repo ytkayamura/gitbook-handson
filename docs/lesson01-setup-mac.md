@@ -1,8 +1,8 @@
 # Lesson 1: 環境構築(Mac編)
 まっさらな環境で試せていないので、手順に漏れがあるかもしれません。  
 上手くいかなかったら教えてください。
-## 各種インストール
-#### Homebrewのインストール
+
+## Homebrewのインストール
 Macのパッケージ管理ツールです。  
 インストールの確認。
 ```
@@ -15,7 +15,7 @@ Homebrew/homebrew-cask (git revision cfdff; last commit 2018-11-12)
 インストールされていなければ下記などを参考にインストールしてください。
 https://qiita.com/rabbit1013/items/1494cf345ff172c3b9cd
 
-#### Git
+## Git
 インストールされているはずです。  
 一応バージョンを確認。
 ```
@@ -24,7 +24,7 @@ git version 2.19.1
 ```
 2系なら大丈夫かと思います。
 
-#### Source Treeのインストール
+## Source Treeのインストール
 GitのGUIツールです。  
 https://ja.atlassian.com/software/sourcetree  
 ダウンロードして解凍し、起動が確認できたら`アプリケーション`フォルダに入れておいてください。  
@@ -34,7 +34,7 @@ https://www.sourcetreeapp.com/download-archives
 
 起動後、アカウントの登録やら必要かもしれませんが、使用できる状態にしておいてください。
 
-#### nodebrewのインストール
+## nodebrewのインストール
 nodeのバージョン管理ツールです。  
 複数バージョンのnodeをインストールして切り替えができます。  
 同カテゴリのツール`ndenv`の方がディレクトリ毎にバージョンを設定できるので今から環境構築する人はこちらが便利のはずですが、私が使ってないため、以下は`nodebrew`の導入方法です。  
@@ -73,7 +73,7 @@ $ node --version
 v10.11.0
 ```
 
-#### yarnのインストール
+## yarnのインストール
 `yarn`はnodeのパッケージ管理ツール`npm`の高速版です。  
 普通にインストールすると上でインストール済みのnodeまでインストールされてしまうので、nodeのインストールをスキップするオプションを指定します。
 ```
@@ -93,7 +93,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 9.0.1+11, mixed mode)
 などと出てきたらそれはhadoopの`yarn`です。  
 `$HOME/.nodebrew/current/bin/yarn`が優先されるように`.bashrc`などで設定しましょう。
 
-#### VSCodeのインストール
+## VSCodeのインストール
 https://code.visualstudio.com/
 ダウンロード、解凍して、`アプリケーション`フォルダに入れます。  
 tslintのExtensionもインストールしておきましょう。
@@ -109,3 +109,9 @@ Mac版VSCodeでは日本語をバックスペースで削除した際に制御�
 `Editor: Render Control Charactors`にチェック。  
 
 意図しない制御文字ができてしまった際には必ず削除するようにしましょう。  
+
+## iTermのインストール
+タブ分割ができるターミナルソフトです。  
+このHands onではいずれ3窓同時に見ながら開発を進めることになるので、インストールしておいてください。  
+https://www.iterm2.com/
+ダウンロード、解凍して、`アプリケーション`フォルダに入れます。  

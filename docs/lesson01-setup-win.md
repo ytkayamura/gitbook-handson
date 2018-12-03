@@ -64,3 +64,11 @@ https://code.visualstudio.com/
 tslintのExtensionもインストールしておきましょう。
 https://marketplace.visualstudio.com/items?itemName=eg2.tslint
 上のページの`Install`ボタンを押し、VSCode上でまた`Install`ボタンを押し、インストールを完了させてください。
+
+## ConEmuのインストール
+タブの分割やCtrl+Vによる貼り付けが可能なターミナルソフトです。  
+このHands onではいずれ3窓同時に見ながら開発を進めることになるので、インストールしておいてください。    
+下記サイトよりダウンロードし、インストールします。  
+https://conemu.github.io/  
+設定でシェルにGit Bashを選んでおきましょう。  
+![ConEmu設定](../pic/conEmu-conf.png)
