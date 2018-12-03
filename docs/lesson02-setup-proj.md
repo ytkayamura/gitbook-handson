@@ -48,11 +48,6 @@ http://localhost:8081
 `Hello Express!`と表示されたらOKです！
 
 ## 画面分割
-`build:dev:server`と`start:dev:server`のウィンドウを同時に見るために、画面分割できるターミナルソフトの利用を推奨します。  
-クライアント側が加わるともう一枚増えるので。  
-
-Macなら`iTerm`が超定番。  
-https://www.iterm2.com/  
-
-Windowsなら`ConEmu`あたりがよさそうです。
-https://conemu.github.io/
+`build:dev:server`と`start:dev:server`のウィンドウを同時に見るために、画面分割しましょう。   
+クライアント側が加わるともう一枚増えます。  
+iTerm2なら(Shift+)Command+D、ConEmuならShift+Ctrl+O/E。   

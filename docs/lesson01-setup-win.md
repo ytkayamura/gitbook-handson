@@ -48,11 +48,12 @@ v10.11.0
 ```
 
 ## yarnのインストール
-下記サイトよりインストールします。
-https://yarnpkg.com/lang/en/docs/install/#windows-stable
+下記サイトよりインストールします。  
+https://yarnpkg.com/lang/en/docs/install/#windows-stable  
 
 バージョンを確認します。  
 下記と多少ずれていても大丈夫のはずです。
+
 ```
 $ yarn --version
 1.12.3
@@ -61,8 +62,8 @@ $ yarn --version
 ## VSCodeのインストール
 https://code.visualstudio.com/
 インストーラーをダウンロードして、実行してください。  
-tslintのExtensionもインストールしておきましょう。
-https://marketplace.visualstudio.com/items?itemName=eg2.tslint
+tslintのExtensionもインストールしておきましょう。  
+https://marketplace.visualstudio.com/items?itemName=eg2.tslint  
 上のページの`Install`ボタンを押し、VSCode上でまた`Install`ボタンを押し、インストールを完了させてください。
 
 ## ConEmuのインストール

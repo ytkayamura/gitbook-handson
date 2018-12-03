@@ -94,10 +94,10 @@ Java HotSpot(TM) 64-Bit Server VM (build 9.0.1+11, mixed mode)
 `$HOME/.nodebrew/current/bin/yarn`が優先されるように`.bashrc`などで設定しましょう。
 
 ## VSCodeのインストール
-https://code.visualstudio.com/
+https://code.visualstudio.com/  
 ダウンロード、解凍して、`アプリケーション`フォルダに入れます。  
-tslintのExtensionもインストールしておきましょう。
-https://marketplace.visualstudio.com/items?itemName=eg2.tslint
+tslintのExtensionもインストールしておきましょう。  
+https://marketplace.visualstudio.com/items?itemName=eg2.tslint  
 上のページの`Install`ボタンを押し、VSCode上でインストールを完了させてください。
 
 
@@ -110,8 +110,8 @@ Mac版VSCodeでは日本語をバックスペースで削除した際に制御�
 
 意図しない制御文字ができてしまった際には必ず削除するようにしましょう。  
 
-## iTermのインストール
+## iTerm2のインストール
 タブ分割ができるターミナルソフトです。  
 このHands onではいずれ3窓同時に見ながら開発を進めることになるので、インストールしておいてください。  
-https://www.iterm2.com/
+https://www.iterm2.com/  
 ダウンロード、解凍して、`アプリケーション`フォルダに入れます。  
