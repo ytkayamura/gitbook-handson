@@ -51,8 +51,13 @@ Usage:
 ```
 $ brew install nodebrew
 ```
-nodeのバージョンを指定してインストールします。
+* エラーメッセージで下記のコマンドを実行するように旨のエラーが出た場合、実行しましょう。
+  `sudo chown -R $(whoami) /usr/local/share/man/man8`
+
+nodeのバージョンを指定してインストールします。  
+初回はディレクトリはソースダウンロード用のディレクトリを作ってやる必要があるようです。  
 ```
+$ mkdir -p ~/.nodebrew/src
 $ nodebrew install 10.11.0
 ```
 使用するnodeのバージョンを設定します。
