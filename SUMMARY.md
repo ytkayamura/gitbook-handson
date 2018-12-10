@@ -13,4 +13,3 @@
   * [Lesson 5: Reactによるクライアントサイドの実装](docs/lesson05-react.md)
   * [Lesson 6: React練習](docs/lesson06-react-exercise.md)
   * [Lesson 7: Reduxの導入](docs/lesson07-redux.md)
-  * 
