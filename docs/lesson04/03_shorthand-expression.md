@@ -11,7 +11,7 @@ const fuga = { hoge };
 省略しないで書くとこうなります。
 ```
 const hoge = 'abc';
-const fuga = { fuga: fuga };
+const fuga = { hoge: hoge };
 ```
 型がないですね。
 ```
