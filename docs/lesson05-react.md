@@ -15,10 +15,10 @@ $ yarn add -D webpack-dev-server
 ## コミット差分
 Lesson 5終了時点の[Lesson4-2 アロー関数](docs/lesson04/02_arrow-function.md)の`参考`からの差分は下記となります。
 
-https://gitlab.com/jabaoplus/webapp-handson-lesson/commit/1a73fddbdfd57894a29134f1330ddb699cbb7875
+https://gitlab.com/jabaoplus/webapp-handson-lesson/commit/df6da24f56f23ec2fe90c511ca3a314188e679ef
 
 ## webpack.config.js
-[コミット差分](https://gitlab.com/jabaoplus/webapp-handson-lesson/commit/1a73fddbdfd57894a29134f1330ddb699cbb7875)を参考に`webpack.config.js`を追加してください。  
+[コミット差分](https://gitlab.com/jabaoplus/webapp-handson-lesson/commit/df6da24f56f23ec2fe90c511ca3a314188e679ef)を参考に`webpack.config.js`を追加してください。  
 クライアントサイドの`webpack`設定です。
 
 ## client/index.ts
@@ -52,7 +52,7 @@ ReactDOM.render(
 <script src="/bundle.js"></script>
 ```
 
-## client/component/Hello.tsx
+## client/components/Hello.tsx
 `index.ts`で使用されていたルートコンポーネントです。  
 renderの戻り値の`JSX`の型が`JSX.Element`と指定されていますね。
 ```
@@ -75,10 +75,10 @@ export default class Hello extends React.Component {
     "build": "webpack --mode production",
 ```
 
-`start`コマンドに`build`を追加しましょう。
+`heroku-postbuild`コマンドに`build`を追加しましょう。
 ```
--   "start": "yarn build:server && node server/server.bundle.js",
-+   "start": "yarn build && yarn build:server && node server/server.bundle.js",
+-   "heroku-postbuild": "yarn build:server"
++   "heroku-postbuild": "yarn build && yarn build:server"
 ```
 
 ## デバッグ起動

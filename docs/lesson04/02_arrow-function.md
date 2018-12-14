@@ -81,4 +81,4 @@ const generateCallback = (s: string):() => void => ():void => console.log(s);
 アロー関数の書き方を練習してみましょう。
 
 ## 参考
-https://gitlab.com/jabaoplus/webapp-handson-lesson/commit/af1697f01e8a7df3c7e9a437782f8aaf012be956
+https://gitlab.com/jabaoplus/webapp-handson-lesson/commit/87d3ca30137168a7ed9e9684d92ef756b981c906

@@ -9,7 +9,7 @@ Reactの`props`と`state`の使い方について学んでいきます。
 
 ## propsの追加
 Helloコンポーネントにpropsを追加してみましょう。
-### client/component/Hello.tsx
+### client/conponents/Hello.tsx
 まずはpropsのinterfaceを定義します。
 
 ```tsx
@@ -48,7 +48,7 @@ index.tsxから渡す`initialName`の値を変えてやれば、`Hello xxx!`と�
 
 ## stateの追加
 画面表示される`Hello `の後の名前をstateにして変更できるようにしてみましょう。
-### client/component/Hello.tsx
+### client/conponents/Hello.tsx
 stateのinterfaceを定義します。
 ```tsx
 + interface State {
@@ -85,7 +85,7 @@ class定義の中でstateを定義、初期化します。
 ## stateの変更
 stateを変更できるボタンを追加します。
 
-### client/component/Hello.tsx
+### client/conponents/Hello.tsx
 state.nameを`太郎`と`花子`に変更するメソッドを追加します。
 ```tsx
   setNameTaro = (): void => {
@@ -123,13 +123,13 @@ setNameHanako: () => void = (): void => {
 ### コミット差分1
 いったんここまででコミットしておきましょう。  
 前回との差分は以下です。  
-https://gitlab.com/jabaoplus/webapp-handson-lesson/commit/e5ed8747913d90012d4f389080ceb221feff8d57
+https://gitlab.com/jabaoplus/webapp-handson-lesson/commit/b8ea247896787cadedc16a4f8121ebeba490549a
 
 ## イベントハンドラへの引数の埋め込み
 `setNameTaro()`と`setNameHanako()`をひとつにまとめてみましょう。  
 `returnSetName()`は引数の`name`を埋め込んだアロー関数を返す関数(**高階関数**)です。  
 高階関数については[Lesson 4](docs/lesson04/02_arrow-function.md)でも紹介しましたね。
-### client/component/Hello.tsx
+### client/conponents/Hello.tsx
 ```tsx
 -  setNameTaro = (): void => {
 -    this.setState({ name: '太郎' });
@@ -182,7 +182,7 @@ functionを使って書くとこんな風になります。
 ## テキストボックスの追加
 名前を入力できるようにしてみましょう。  
 まずは、入力中の内容を保持する`state`のプロパティを追加します。
-### client/component/Hello.tsx
+### client/conponents/Hello.tsx
 ```typescript
  interface State {
    name: string;
@@ -266,13 +266,13 @@ Chrome拡張の[React Developer Tools](https://chrome.google.com/webstore/detail
 ### コミット差分2
 いったんここまででコミットしておきましょう。
 前回との差分は以下です。
-https://gitlab.com/jabaoplus/webapp-handson-lesson/commit/83a86ec0e7dbaa53d1e91364671488d11adc4982
+https://gitlab.com/jabaoplus/webapp-handson-lesson/commit/51046d571513a1064ccec01b838b758a9e06d653
 
 ## Formの利用
 Formを使うとテキストボックスのKeyPressイベントの記述は不要になります。  
 記述量は減っていないのですが、こちらの方が好まれる書き方かもしれません。  
 
-### client/component/Hello.tsx
+### client/conponents/Hello.tsx
 テキストボックス、ボタンをFormで包みます。  
 ちなみにスタイルなしではFormの下に改行が入るようです。  
 * `setNameFromInput()`をFormサブミットのイベントハンドラに設定。
@@ -312,14 +312,14 @@ Formを使うとテキストボックスのKeyPressイベントの記述は不�
 ### コミット差分3
 ここまででコミットしておきましょう。
 前回との差分は以下です。
-https://gitlab.com/jabaoplus/webapp-handson-lesson/commit/141af707a84b6a7c87b7d3a510508984b9ecf63e
+https://gitlab.com/jabaoplus/webapp-handson-lesson/commit/9f0b675e867f724d2986404b69ca0c9e7595519e  
 
 ## refの利用
 次にReactのrefの使って書き換えてみましょう。  
 refによりテキストボックスのDOMの参照を取得し、値の取得・設定を行います  
 これにより`state.input`が不要になり、テキストボックスのChangeイベントの制御も不要になります。
 
-### client/component/Hello.tsx
+### client/conponents/Hello.tsx
 まず、`state.input`の定義と初帰化を削除し、テキストボックスの参照を保持するクラスプロパティを定義します。  
 プロパティ名後ろの`!`は未初期化のエラーを抑止するために付けています。
 

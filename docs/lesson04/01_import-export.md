@@ -79,4 +79,4 @@ hoge.piyo();
 import / exportを練習してみましょう。
 
 ## 参考
-https://gitlab.com/jabaoplus/webapp-handson-lesson/commit/12c70ea45d13355d782434db8d2dadc171a7df7a
+https://gitlab.com/jabaoplus/webapp-handson-lesson/commit/c4d3e14557bdc8255ec15eb9829648fd3c80de98

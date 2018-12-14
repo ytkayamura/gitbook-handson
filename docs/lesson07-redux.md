@@ -1,7 +1,7 @@
 # Lesson 7: Reduxの導入
 
 いよいよReduxを導入していきます。 
-まずソースコードを[Lesson 6のフォーム実装後の状態](https://gitlab.com/jabaoplus/webapp-handson-lesson/tree/141af707a84b6a7c87b7d3a510508984b9ecf63e)にしてください。  
+まずソースコードを[Lesson 6のフォーム実装後の状態](https://gitlab.com/jabaoplus/webapp-handson-lesson/tree/cfbc14a970af62d82a2a0f28d90c79ba62ca5304)にしてください。  
 
 ## Redux概説
 Reduxは乱暴に言ってしまうと保守性を保ったままグローバル変数を導入する仕組みです。  
@@ -144,7 +144,7 @@ GlobalStateのプロパティが`greeting`のみなので`...state,`は不要な
 
 ## コンポーネントでのReduxの利用
 
-### client/component/Hello.tsx
+### client/conponents/Hello.tsx
 
 まずは必要なモジュールをimportします。
 
@@ -347,7 +347,7 @@ React Developer Toolsとは違い、こちらはソースコードの変更が�
 ```
 
 ## コミット差分
-https://gitlab.com/jabaoplus/webapp-handson-lesson/commit/e4089cbe92fbc11eaff1a26171f847ad65c646d2
+https://gitlab.com/jabaoplus/webapp-handson-lesson/commit/33e5310fa9404241f7b5e52a700b5999ae8bd275  
 
 ## 演習
 電卓を作ってみましょう。  
