@@ -278,7 +278,9 @@ Formを使うとテキストボックスのKeyPressイベントの記述は不�
 * `setNameFromInput()`をFormサブミットのイベントハンドラに設定。
 * テキストボックスのKeyPressイベントの設定を削除
 * ボタンのクリックイベントの設定を削除
-* ボタンをサブミットタイプに変更
+* ボタンをサブミットタイプに変更  
+
+
 ```tsx
 -        <input type="text" value={input} onChange={this.handleInputChange} onKeyPress={this.handleInputKeyPress} />
 -        <button onClick={this.setNameFromInput}>Hello!</button>
@@ -392,4 +394,4 @@ refを利用したソースコードは参考までにコミットしておい�
 そのようにするためには、`returnSetName()`は使用できず、新たなメソッドを定義する必要が出てくるはずです。
 
 ### 解答例
-https://gitlab.com/jabaoplus/webapp-handson-lesson/commit/78aebfead8ab8dcaf24421ea1ef7655cbe3ac68f
+https://gitlab.com/jabaoplus/webapp-handson-lesson/commit/d181710713f746ad8d682a34bbc7b1f96b759323

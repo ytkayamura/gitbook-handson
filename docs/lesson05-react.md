@@ -119,6 +119,9 @@ import * as path from 'path';
     },
 ```
 
+### クライアントサイドのビルド
+`yarn build`を実行し、`public/bundle.js`を作成します。  
+
 ### サーバサイド再起動
 `yarn build:dev:server`と`yarn start:dev:server`を一度停止して再実行しましょう。
 
