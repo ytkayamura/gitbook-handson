@@ -1,7 +1,7 @@
 # Lesson 7: Reduxの導入
 
 いよいよReduxを導入していきます。 
-まずソースコードを[Lesson 6のフォーム実装後の状態](https://gitlab.com/jabaoplus/webapp-handson-lesson/tree/cfbc14a970af62d82a2a0f28d90c79ba62ca5304)にしてください。  
+まずソースコードを[Lesson 6のフォーム実装後の状態](https://gitlab.com/jabaoplus/webapp-handson-lesson/commit/9f0b675e867f724d2986404b69ca0c9e7595519e)にしてください。  
 
 ## Redux概説
 Reduxは乱暴に言ってしまうと保守性を保ったままグローバル変数を導入する仕組みです。  
@@ -347,7 +347,7 @@ React Developer Toolsとは違い、こちらはソースコードの変更が�
 ```
 
 ## コミット差分
-https://gitlab.com/jabaoplus/webapp-handson-lesson/commit/33e5310fa9404241f7b5e52a700b5999ae8bd275  
+https://gitlab.com/jabaoplus/webapp-handson-lesson/commit/33e5310fa9404241f7b5e52a700b5999ae8bd275
 
 ## 演習
 電卓を作ってみましょう。  

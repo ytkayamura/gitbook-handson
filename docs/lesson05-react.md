@@ -21,8 +21,8 @@ https://gitlab.com/jabaoplus/webapp-handson-lesson/commit/df6da24f56f23ec2fe90c5
 [コミット差分](https://gitlab.com/jabaoplus/webapp-handson-lesson/commit/df6da24f56f23ec2fe90c511ca3a314188e679ef)を参考に`webpack.config.js`を追加してください。  
 クライアントサイドの`webpack`設定です。
 
-## client/index.ts
-ビルドのエントリポイントとなるindex.tsを作成します。  
+## client/index.tsx
+ビルドのエントリポイントとなるindex.tsxを作成します。  
 `ReactDOM.render()`の第一引数が`JSX`で記述されたルートとなるReactコンポーネントです。 
 `JSX`はHTMLライクにタグでReactコンポーネントの構造を記述でき、`{}`で囲ってTypeScriptのコードを埋め込むこともできます。  
 厳密には大きく異なるものですが、PHP等のHTMLテンプレートに似た感覚で記述できるかと思います。
@@ -40,7 +40,7 @@ ReactDOM.render(
 ```
 
 ## public/index.html
-トップページです。index.tsの`getElementById('app')`で選択されるエレメントが`<div id=app></div>`です。  
+トップページです。index.tsxの`getElementById('app')`で選択されるエレメントが`<div id=app></div>`です。  
 `script`タグにビルド結果として出力される`bundle.js`を指定しています。
 ```
 <!doctype html public="storage">
@@ -53,7 +53,7 @@ ReactDOM.render(
 ```
 
 ## client/components/Hello.tsx
-`index.ts`で使用されていたルートコンポーネントです。  
+`index.tsx`で使用されていたルートコンポーネントです。  
 renderの戻り値の`JSX`の型が`JSX.Element`と指定されていますね。
 ```
 import * as React from 'react';

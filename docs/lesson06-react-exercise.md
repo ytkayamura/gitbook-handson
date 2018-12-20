@@ -384,7 +384,7 @@ Reactではコンポーネントの表示について定義し、その表示に
 
 ### コミット差分4
 前回からのコミット差分は下記となります。  
-https://gitlab.com/jabaoplus/webapp-handson-lesson/commit/566e714c1206dee16e47f4fc32cee0b02f9fb2ad  
+https://gitlab.com/jabaoplus/webapp-handson-lesson/commit/f2a9e8a3323497dc9921259f965d926925e59966  
 refを利用したソースコードは参考までにコミットしておいてもよいですが、演習に進む前にソースコードをrefの利用前の状態に戻しておきましょう。  
 
 ## 演習
