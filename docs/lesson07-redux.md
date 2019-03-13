@@ -58,9 +58,8 @@ Atcion Typeと一緒に受け渡すデータを含む**Actionオブジェクト�
 HelloとGoodbyeアクションを作ってみます。  
 さよならを言うときは名前は呼びません。  
 
-### client/ations.ts
+### client/actions.ts
 ```ts
-import { Action } from 'redux';
  // Action Types
 export enum ActionTypes {
   HELLO = 'HELLO',
@@ -68,24 +67,22 @@ export enum ActionTypes {
 }
 
  // Action Interfaces
-interface HelloAction extends Action {
-  type: ActionTypes.HELLO;
+export type Action = {
+  type: ActionTypes.HELLO,
   payload: {
-    name: string;
-  };
-}
-interface GoodbyeAction extends Action {
-  type: ActionTypes.GOODBYE;
-}
-export type Act= HelloAction | GoodbyeAction;
+    name: string,
+  },
+} | {
+  type: ActionTypes.GOODBYE,
+};
 
 // Action Creators
 export const ActionCreators = {
-  hello: (name: string): HelloAction => ({
+  hello: (name: string): Action => ({
     type: ActionTypes.HELLO,
     payload: { name },
   }),
-  goodbye: (): GoodbyeAction => ({
+  goodbye: (): Action => ({
     type: ActionTypes.GOODBYE,
   }),
 };
@@ -104,9 +101,9 @@ Action Interfaceの定義において、`type`(Action Type)の他に受け渡す
 
 ```ts
 import { GlobalState, initialState } from './state';
-import { Act, ActionTypes } from './actions';
+import { Action, ActionTypes } from './actions';
 
-export default function reducers(state: GlobalState = initialState, action: Act): GlobalState {
+export default function reducers(state: GlobalState = initialState, action: Action): GlobalState {
   switch (action.type) {
   case ActionTypes.HELLO:
     {
@@ -144,17 +141,17 @@ GlobalStateのプロパティが`greeting`のみなので`...state,`は不要な
 
 ## コンポーネントでのReduxの利用
 
-### client/conponents/Hello.tsx
+### client/components/Hello.tsx
 
 まずは必要なモジュールをimportします。
 
 ```tsx
 + import { connect } from 'react-redux';
 + import { GlobalState } from '../state';
-+ import { Act, ActionCreators as Acc } from '../actions';
++ import { Action, ActionCreators as Acc } from '../actions';
 ```
 
-上で定義した`GlobalState`と`Act`(Action Typeのユニオン型)、`ActionCreators`の他、react-reduxより`connect`をimportしています。
+上で定義した`GlobalState`と`Action`(Action Interfaceのユニオン型)、`ActionCreators`の他、react-reduxより`connect`をimportしています。
 
 
 
@@ -194,7 +191,7 @@ Helloのexportをやめ、代わりに`connect()`したHelloをexportします�
  interface Props {
 -  initialName: string;
 +  greeting: string;
-+  dispatch: (action: Act) => void;
++  dispatch: (action: Action) => void;
  }
 ```
 `dispacth()`はActionを引数とする関数です。  
@@ -347,7 +344,7 @@ React Developer Toolsとは違い、こちらはソースコードの変更が�
 ```
 
 ## コミット差分
-https://gitlab.com/jabaoplus/webapp-handson-lesson/commit/33e5310fa9404241f7b5e52a700b5999ae8bd275
+https://gitlab.com/jabaoplus/webapp-handson-lesson/commit/06eb4abf948fa902a2240e843ab0ad9c37ea868b
 
 ## 演習
 電卓を作ってみましょう。  

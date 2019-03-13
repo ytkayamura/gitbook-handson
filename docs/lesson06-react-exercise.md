@@ -9,7 +9,7 @@ Reactの`props`と`state`の使い方について学んでいきます。
 
 ## propsの追加
 Helloコンポーネントにpropsを追加してみましょう。
-### client/conponents/Hello.tsx
+### client/components/Hello.tsx
 まずはpropsのinterfaceを定義します。
 
 ```tsx
@@ -48,7 +48,7 @@ index.tsxから渡す`initialName`の値を変えてやれば、`Hello xxx!`と�
 
 ## stateの追加
 画面表示される`Hello `の後の名前をstateにして変更できるようにしてみましょう。
-### client/conponents/Hello.tsx
+### client/components/Hello.tsx
 stateのinterfaceを定義します。
 ```tsx
 + interface State {
@@ -85,7 +85,7 @@ class定義の中でstateを定義、初期化します。
 ## stateの変更
 stateを変更できるボタンを追加します。
 
-### client/conponents/Hello.tsx
+### client/components/Hello.tsx
 state.nameを`太郎`と`花子`に変更するメソッドを追加します。
 ```tsx
   setNameTaro = (): void => {
@@ -129,7 +129,7 @@ https://gitlab.com/jabaoplus/webapp-handson-lesson/commit/b8ea247896787cadedc16a
 `setNameTaro()`と`setNameHanako()`をひとつにまとめてみましょう。  
 `returnSetName()`は引数の`name`を埋め込んだアロー関数を返す関数(**高階関数**)です。  
 高階関数については[Lesson 4](docs/lesson04/02_arrow-function.md)でも紹介しましたね。
-### client/conponents/Hello.tsx
+### client/components/Hello.tsx
 ```tsx
 -  setNameTaro = (): void => {
 -    this.setState({ name: '太郎' });
@@ -182,7 +182,7 @@ functionを使って書くとこんな風になります。
 ## テキストボックスの追加
 名前を入力できるようにしてみましょう。  
 まずは、入力中の内容を保持する`state`のプロパティを追加します。
-### client/conponents/Hello.tsx
+### client/components/Hello.tsx
 ```typescript
  interface State {
    name: string;
@@ -272,7 +272,7 @@ https://gitlab.com/jabaoplus/webapp-handson-lesson/commit/51046d571513a1064ccec0
 Formを使うとテキストボックスのKeyPressイベントの記述は不要になります。  
 記述量は減っていないのですが、こちらの方が好まれる書き方かもしれません。  
 
-### client/conponents/Hello.tsx
+### client/components/Hello.tsx
 テキストボックス、ボタンをFormで包みます。  
 ちなみにスタイルなしではFormの下に改行が入るようです。  
 * `setNameFromInput()`をFormサブミットのイベントハンドラに設定。
@@ -321,7 +321,7 @@ https://gitlab.com/jabaoplus/webapp-handson-lesson/commit/9f0b675e867f724d298640
 refによりテキストボックスのDOMの参照を取得し、値の取得・設定を行います  
 これにより`state.input`が不要になり、テキストボックスのChangeイベントの制御も不要になります。
 
-### client/conponents/Hello.tsx
+### client/components/Hello.tsx
 まず、`state.input`の定義と初帰化を削除し、テキストボックスの参照を保持するクラスプロパティを定義します。  
 プロパティ名後ろの`!`は未初期化のエラーを抑止するために付けています。
 
