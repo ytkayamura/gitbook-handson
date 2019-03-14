@@ -43,13 +43,13 @@ export const initialState: GlobalState = {
 ## Actionの実装
 Actionの実装については、**Action Type**、**Action Interface**と**Action Creator**の3つを実装すると考えるとわかりやすいと思います。  
 
-* **Action Type**
+* **Action Type**  
 **コマンド名**と考えてよいでしょう。
 
-* **Action Interface**
+* **Action Interface**  
 Atcion Typeと一緒に受け渡すデータを含む**Actionオブジェクトの型**です。
 
-* **Action Creator**
+* **Action Creator**  
 **Actionオブジェクトを作成する関数**です。
 
 ちなみに[公式ドキュメント](https://redux.js.org/basics/actions)で用語として出てくるのは**Action Creator**のみです。  
