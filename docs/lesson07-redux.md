@@ -11,13 +11,13 @@ Reactのコンポーネント個別のstateとの混同に注意です。
 Reduxの使用にあたってはまず3つの中心となる概念を理解しましょう。  
 **Action**、**Reducer**、**Store**です。
 
-* **Action**
+* **Action**  
 Actionは`GlobalState`を変更するための命令です。
 
-* **Reducer**
+* **Reducer**  
 ReducerはActionを受け取り、Actionの内容に応じて`GlobalState`の変更を行います。
 
-* **Store**
+* **Store**  
 StoreはReducerとGlobalStateを保持し、ActionをReducerに送ります(`dispatch`)。 
 `dispatch()`の呼び出しがReducer処理の契機となります。  
 このHans onではStoreに関して書くコードは初期処理以外には`dispatch()`の呼び出しくらいですので上の2つと比べると意識することは少ないかもしれません。
